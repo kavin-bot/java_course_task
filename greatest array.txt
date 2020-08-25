@@ -1,0 +1,32 @@
+package sample;//greatest element in the array
+
+public class Greatestarray {
+
+	public static void main(String[] great) 
+	{
+		int temp=0;
+		int array[]=new int[great.length];
+		for(int i=0;i<great.length;i++)
+		{
+			array[i]=Integer.parseInt(great[i]);
+		}
+		for(int i=0;i<array.length;i++)
+		{
+			int min=i;
+			for(int j=i+1;j<array.length;j++) 
+			{
+				if(array[min]<array[j])  
+				{
+					//min=j;
+					temp=array[i];
+					array[i]=array[j];
+					array[j]=temp;
+					}
+			}
+		}
+		System.out.println("the greatest element are"+" "+array[0]);
+		
+		}
+	
+
+}
